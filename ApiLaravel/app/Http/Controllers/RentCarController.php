@@ -131,7 +131,7 @@ class RentCarController extends Controller
         if ($worker != null) {//Есть ли авто под данную категорию и авто должно быть с водителем
             $auto = Auto::where('category', '<=', $worker->category)->where('driver_id', '!=', null)->first();
             if ($auto != null) {
-                $auto = Auto::where('category', '<=', $worker->category)->where('driver_id', '!=', null)->orderBy('category','ASC')->get();
+                $auto = Auto::where('category', '<=', $worker->category)->where('driver_id', '!=', null)->orderBy('name','ASC')->get();
 
                 $array=[];
                 for ($i = 0; $i != Count($auto); $i++) {
