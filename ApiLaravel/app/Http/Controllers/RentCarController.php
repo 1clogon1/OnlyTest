@@ -55,7 +55,7 @@ class RentCarController extends Controller
                     }
                 }
 
-                return response(['message' => $array], 200);
+                return response(['rent_car' => $array], 200);
             }
             else {
                     return response(['message' => 'Нету авто под данного работника'], 404);
